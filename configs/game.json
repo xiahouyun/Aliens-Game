@@ -1,0 +1,46 @@
+{
+    "window": {
+        "width": 1280,
+        "height": 480,
+        "fps": 40,
+        "caption": "Aliens Game",
+        "fullscreen": false
+    },
+    "game": {
+        "max_shots": 2,
+        "alien_odds": 22,
+        "bomb_odds": 60,
+        "alien_reload": 12
+    },
+    "ui": {
+        "font_path": "assets/font/msyh.ttc",
+        "font_size": 24,
+        "score_font_size": 20,
+        "button_color": [50, 150, 255],
+        "button_hover_color": [100, 200, 255],
+        "panel_color": [30, 30, 30, 200],
+        "progress_bar_bg": [50, 50, 50],
+        "progress_bar_fill": [0, 200, 0]
+    },
+    "entity": {
+        "player": {
+            "speed": 10,
+            "bounce": 24,
+            "gun_offset": -11
+        },
+        "alien": {
+            "speed": 13,
+            "animcycle": 12
+        },
+        "shot": {
+            "speed": -11
+        },
+        "bomb": {
+            "speed": 9
+        },
+        "explosion": {
+            "defaultlife": 40,
+            "animcycle": 10
+        }
+    }
+}

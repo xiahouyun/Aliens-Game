@@ -1,0 +1,1 @@
+"""工具模块：已废弃，请使用 resource_manager"""

@@ -1,0 +1,17 @@
+{
+    "player": {
+        "speed": 10,
+        "bounce": 24,
+        "gun_offset": -11
+    },
+    "alien": {
+        "speed": 13,
+        "animcycle": 12
+    },
+    "shot": {
+        "speed": -11
+    },
+    "bomb": {
+        "speed": 9
+    }
+}
