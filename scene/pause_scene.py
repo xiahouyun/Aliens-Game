@@ -18,7 +18,9 @@ class PauseScene(IScene):
 
     def init(self):
         """初始化：创建UI元素"""
-        self.panel = UIPanel(pygame.Rect(170, 150, 300, 300))
+        if pygame.mixer:
+            pygame.mixer.music.stop()
+        self.panel = UIPanel(pygame.Rect(490, 150, 300, 300))
         self.pause_text = UIText("pause")
         self.pause_text.set_text("游戏暂停")
         self.resume_btn = UIButton("resume", callback=self.resume_game)
@@ -31,6 +33,8 @@ class PauseScene(IScene):
 
     def back_to_main(self):
         """返回主界面：重置游戏场景并切换到开始场景"""
+        if pygame.mixer:
+            pygame.mixer.music.stop()
         self.scene_manager.reset_scene("game")
         self.scene_manager.switch_scene("start")
 

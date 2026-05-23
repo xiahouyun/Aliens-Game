@@ -73,6 +73,9 @@ class EventTypes:
     PLAYER_DIED = "player_died"
     GAME_OVER = "game_over"
     SCENE_CHANGED = "scene_changed"
+    MULTIPLAYER_PLAYER_JOINED = "multiplayer_player_joined"
+    MULTIPLAYER_PLAYER_LEFT = "multiplayer_player_left"
+    MULTIPLAYER_STATE_CHANGED = "multiplayer_state_changed"
 
 
 # 全局事件总线单例

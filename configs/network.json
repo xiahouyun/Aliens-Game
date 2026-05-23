@@ -1,0 +1,37 @@
+{
+    "tcp": {
+        "port": 9876,
+        "buffer_size": 65536,
+        "connect_timeout": 5.0
+    },
+    "udp_discovery": {
+        "port": 9877,
+        "multicast_group": "239.255.0.1",
+        "broadcast_interval": 2.0,
+        "discover_token": "ALIENS_DISCOVER",
+        "response_token": "ALIENS_RESPONSE"
+    },
+    "sync": {
+        "magic_number": 3735928559,
+        "sync_interval": 0.05,
+        "header_fmt": "!IHI"
+    },
+    "room": {
+        "max_players": 3,
+        "min_players": 2,
+        "countdown_seconds": 5
+    },
+    "message_types": {
+        "JOIN_REQUEST": 1,
+        "JOIN_ACCEPT": 2,
+        "JOIN_REJECT": 3,
+        "PLAYER_READY": 4,
+        "GAME_START": 5,
+        "PLAYER_INPUT": 6,
+        "GAME_STATE_SYNC": 7,
+        "GAME_OVER": 8,
+        "PLAYER_DISCONNECT": 9,
+        "HEARTBEAT": 10,
+        "LOBBY_STATE": 11
+    }
+}

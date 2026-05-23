@@ -13,14 +13,17 @@ class Player(pygame.sprite.Sprite, IEntity):
     images = []         # 玩家图片列表
     containers = None   # 所属精灵组
 
-    def __init__(self):
+    def __init__(self, spawn_pos=None):
         super().__init__(self.containers)
         self.image = self.images[0]
-        self.rect = self.image.get_rect(midbottom=SCREENRECT.midbottom)
+        if spawn_pos:
+            self.rect = self.image.get_rect(midbottom=spawn_pos)
+        else:
+            self.rect = self.image.get_rect(midbottom=SCREENRECT.midbottom)
         self.reloading = False
         self.origtop = self.rect.top
         self.facing = -1
-        self.health = 100  # 玩家血量（0-100）
+        self.health = 100
         self.max_health = 100
 
     def move(self, direction):

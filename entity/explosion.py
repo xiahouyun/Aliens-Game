@@ -19,6 +19,16 @@ class Explosion(pygame.sprite.Sprite, IEntity):
         config = physics_system.get_entity_config("explosion")
         self.life = config["defaultlife"]
 
+    @classmethod
+    def from_pos(cls, x, y):
+        exp = cls.__new__(cls)
+        pygame.sprite.Sprite.__init__(exp, cls.containers)
+        exp.image = cls.images[0]
+        exp.rect = exp.image.get_rect(center=(x, y))
+        config = physics_system.get_entity_config("explosion")
+        exp.life = config["defaultlife"]
+        return exp
+
     def update(self):
         """播放爆炸动画（调用物理系统）"""
         physics_system.update_explosion(self)

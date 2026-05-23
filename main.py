@@ -6,6 +6,7 @@ from scene.start_scene import StartScene
 from scene.game_scene import GameScene
 from scene.pause_scene import PauseScene
 from scene.over_scene import OverScene
+from scene.lobby_scene import LobbyScene
 
 
 def main():
@@ -32,6 +33,7 @@ def main():
     sm.register_scene("game", GameScene(sm))
     sm.register_scene("pause", PauseScene(sm))
     sm.register_scene("over", OverScene(sm))
+    sm.register_scene("lobby", LobbyScene(sm))
     sm.switch_scene("start")
 
     clock = pygame.time.Clock()
